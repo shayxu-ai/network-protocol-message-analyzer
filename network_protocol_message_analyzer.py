@@ -10,15 +10,12 @@
     Python中Scapy网络嗅探模块的使用 https://www.cnblogs.com/csnd/archive/2004/01/13/11807813.html
     # https://pypi.org/project/scapy/
 
-<<<<<<< HEAD
     # netcat或Hping 也可以考虑
 
-=======
     数据链路层/网络层/传输层/应用层
     Ether()/IP()/TCP()/HTTP()
 
     # filter 使用的是 Berkeley Packet Filter (BPF)语法
->>>>>>> 1e79a0aea172d3ec005b415f34092f8b47206718
 """
 
 
