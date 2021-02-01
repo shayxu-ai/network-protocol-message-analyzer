@@ -9,6 +9,7 @@
     scapy 20分钟教程 https://github.com/secdev/scapy/blob/master/doc/notebooks/Scapy%20in%2015%20minutes.ipynb
     Python中Scapy网络嗅探模块的使用 https://www.cnblogs.com/csnd/archive/2004/01/13/11807813.html
     官方文档 https://pypi.org/project/scapy/
+    http://www.secdev.org/projects/scapy/
 
     1、嗅探数据报文
     2、通过定义报文特征，将报文划入不同分组。（未划分的，就可以忽略）
