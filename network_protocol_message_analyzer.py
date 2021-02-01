@@ -45,5 +45,5 @@ from scapy.all import IP, UDP, DNS, DNSQR, raw, rdpcap
 # 是否加密(获取设备的密钥)，能不能嗅探
 
 if __name__ == "__main__":
-    filename = "朝歌组播机顶盒开机包.pcapng"
+    filename = "机顶盒开机包.pcapng"
     pcap_p = rdpcap(filename)
