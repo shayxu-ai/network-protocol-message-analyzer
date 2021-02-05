@@ -1,3 +1,7 @@
 # pcap
 *.pcapng
 *.pcap
+# pyc
+*.pyc
+__pycache__
+__pycache__/*
