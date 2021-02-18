@@ -9,7 +9,6 @@
     定义报文分类器
 """
 
-from typing import Protocol
 from scapy.all import rdpcap, DHCP, BOOTP, IP
 
 
