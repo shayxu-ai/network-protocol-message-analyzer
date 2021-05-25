@@ -9,15 +9,16 @@
     定义报文分类器
 """
 
-from scapy.all import rdpcap, DHCP, BOOTP, IP
+from typing import Protocol
+from scapy.all import rdpcap, DHCP, BOOTP, IP, HTTP
 
 
 """
-    最后呢，应该有一个对象池子，最后每个对象检测自己是否交互成功，最后按顺序打印。
+    应该有一个对象池子，最后每个对象检测自己是否交互成功，最后按顺序打印。
 """
 
 class message_classifier():
-    def __init__(self, final_state, client_ip=None, server_ip=None) -> None:
+    def __init__(self, final_state=None, client_ip=None, server_ip=None) -> None:
         super().__init__()
         self.state = 0                  # 用于记录协议状态
         self.packets = list()           # 用于记录协议相关报文
@@ -65,7 +66,9 @@ class message_classifier():
     def check_state(self):
         return self.state == self.final_state
 
+    def http(self, packet):
 
+        return
 
 
 if __name__ == "__main__":
@@ -74,14 +77,15 @@ if __name__ == "__main__":
 
     dhcp_intranet = message_classifier(4, server_ip='192.168.1.1')
     dhcp_private = message_classifier(4, server_ip='42.103.0.1')
+    http = message_classifier()
     for p in pcap_p:
         if BOOTP in p:
             dhcp_intranet.dhcp(p)
             # dhcp_private.dhcp(p)
+        if HTTP in p:
+            http.http()
 
-    print(dhcp_intranet.packets)
-    print(len(dhcp_intranet.packets))
-
+    
         
 
 
